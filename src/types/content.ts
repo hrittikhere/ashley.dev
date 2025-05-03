@@ -17,6 +17,13 @@ export interface Project {
     link: ContentLink;
 }
 
+
+export interface Project {
+    name: string;
+    description: string;
+    link: ContentLink;
+}
+
 /**
  * Interface for speaking engagements
  */
@@ -29,6 +36,8 @@ export interface SpeakingEngagement {
     tags?: string[];
     link?: ContentLink;
 }
+
+
 
 /**
  * Interface for tag filtering

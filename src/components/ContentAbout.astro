@@ -1,104 +1,80 @@
 ---
 import { Code } from 'astro:components';
 
-const code = `interface Developer {
-    name: string;
-    skills: string[];
-    interests: string[];
-};
+const code = `
+Developer:
+  name: Ashley Willis
+  skills:
+  - GitHub
+  - Docker
+  - Kubernetes
+  - Cloudflare
+  - Golang
+  - Python
+  - Node.js
+  - Flask
+  - JavaScript
+  - Angular
+  - Vue.js
+  - Jinja2
+  - HTML5
+  - CSS3
+  - TailwindCSS
+  - Astro
+  - SCSS
+  - Markdown
+  - WordPress
+  - Adobe Illustrator
+  interests:
+  - Open Source
+  - Developer Experience
+  - Developer Relations
+  - Performance
+  - AI
+  - Accessibility
+  - Networking
+  - Photography
+  - Maker Projects
+  - Public Speaking
+TechStack:
+  devOps:
+  - GitHub
+  - Docker
+  - Kubernetes
+  - Cloudflare
+  backend:
+  - Golang
+  - Python
+  - Node.js
+  - Flask
+  frontend:
+  - JavaScript
+  - Angular
+  - Vue.js
+  - Jinja2
+  - HTML5
+  - CSS3
+  - TailwindCSS
+  - Astro
+  - SCSS
+  - Markdown
+  - WordPress
+  design:
+  - Adobe Illustrator
+Contact:
+  github: https://github.com/ashleymcnamara
+  twitter: https://x.com/ashleymcnamara
+  linkedIn: https://www.linkedin.com/in/ashleymcnamara1
+  bluesky: https://bsky.app/profile/ashley.dev
+  email: hello@ashley.dev
 
-interface TechStack {
-    devOps: string[];
-    backend: string[];
-    frontend: string[];
-    design: string[];
-};
-
-type ContactType = 
-    | 'github' 
-    | 'twitter' 
-    | 'linkedIn' 
-    | 'bluesky' 
-    | 'email';
-
-const techStack: TechStack = {
-    devOps: [
-        'GitHub',
-        'Docker',
-        'Kubernetes',
-        'Cloudflare'
-    ],
-    backend: [
-        'Golang',
-        'Python',
-        'Node.js',
-        'Flask'
-    ],
-    frontend: [
-        'JavaScript',
-        'Angular',
-        'Vue.js',
-        'Jinja2',
-        'HTML5',
-        'CSS3',
-        'TailwindCSS',
-        'Astro',
-        'SCSS',
-        'Markdown',
-        'WordPress'
-    ],
-    design: [
-        'Adobe Illustrator'
-    ]
-};
-
-// Developer profile
-const me: Developer = {
-    name: 'Ashley Willis',
-    skills: [
-        ...techStack.devOps,
-        ...techStack.backend,
-        ...techStack.frontend,
-        ...techStack.design
-    ],
-    interests: [
-        'Open Source',
-        'Developer Experience',
-        'Developer Relations',
-        'Performance',
-        'AI',
-        'Accessibility',
-        'Networking',
-        'Photography',
-        'Maker Projects',
-        'Public Speaking'
-    ]
-};
-
-// Contact function
-const contact = (type: ContactType): string => {
-    switch (type) {
-        case 'github':
-            return 'https://github.com/ashleymcnamara';
-        case 'twitter':
-            return 'https://x.com/ashleymcnamara';
-        case 'linkedIn':
-            return 'https://www.linkedin.com/in/ashleymcnamara1';
-        case 'bluesky':
-            return 'https://bsky.app/profile/ashley.dev';
-        case 'email':
-            return 'hello@ashley.dev';
-        default:
-            return 'Send fax.';
-    }
-};
 
 `;
 ---
 
 <Code
     code={code}
-    lang="js"
+    lang="yaml"
     wrap={false}
 />
 
